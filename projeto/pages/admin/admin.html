@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="shortcut icon" href="../../public/favicon.ico" type="image/x-icon">
+    <script type="module" src="./admin.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../login/login.html">Login</a>
+            <a href="#">Admin</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastrar novos Usuários!</h1>
+        <form id="form_cadastro">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Fulano de Tal..." required>
+
+            <label for="data_nasc">Data de Nascimento</label>
+            <input type="date" name="birth_date" id="data_nasc" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="fulano@gmail.com" required>
+
+            <div id="radio-buttons">
+                <span>Você é:</span>
+                <div class="radio-button-option">
+                    <input type="radio" name="tipo_cadastro" id="prof" >
+                    <label for="prof">Professor</label>
+                </div>
+                <div class="radio-button-option">
+                    <input type="radio" name="tipo_cadastro" id="aluno" required>
+                    <label for="aluno">Aluno</label>
+                </div>
+            </div>
+            <label for="fruta">Qual sua fruta favorita?</label>
+            <input type="text" name="fruta" id="fruta" placeholder="Pitaia" required>
+            <button id="enviar">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <span>Feito por Erik G. Coutinho para Prova de Suficiência.</span>
+    </footer>
+</body>
+</html>
