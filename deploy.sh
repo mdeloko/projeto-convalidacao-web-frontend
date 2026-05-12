@@ -8,6 +8,7 @@ git worktree add ../deploy deploy
 
 echo "📤 Preparando arquivos..."
 
+rm -rf ../deploy/pages ../deploy/public
 cp -r ./projeto/pages ../deploy/pages
 cp -r ./projeto/public ../deploy/public
 cp -r ./projeto/index.html ../deploy/index.html
