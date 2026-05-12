@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --bg-color:#333;
+    --text:black;
+    --solid: oklch(66.5% 0.1097 197.2);
+    --text-white: oklch(94.9% 0.0026 277.7);
+    --text-blue: oklch(53.3% 0.1097 197.2);
+    --paper-bg:white;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color:var(--text);
+}
+body{
+    min-height: 100vh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+}
+main{
+    margin: 5vh 20vw;
+    padding: 4vh 3vw;
+    background-color: var(--paper-bg);
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+    h2{
+        font-size: 1.6rem;
+        margin-block: 0.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+        margin-top: 0.2rem;
+    }
+    #ul_dados_pessoais{
+        list-style: none;
+    }
+    p {
+        font-size: 1.1rem;
+        text-indent: 1.5rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+    li {
+        font-size: 1.1rem;
+        line-height: 1.1;
+        margin: .25rem 0;
+        text-align: justify;
+    }
+    .descricao_formacoes{
+        text-indent: 0;
+    }
+    .ul1 {
+        margin-left: 1.2rem;
+    }
+    .ul2 {
+        margin-left: 1.2rem;
+    }
+    .ul3 {
+        margin-left: 1.2rem;
+    }
+    span {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        align-self: center;
+    }
+}
+hr {
+    border-color: var(--text);
+    margin-block: 1rem;
+}
+#botao_voltar{
+    position: fixed;
+    top: 2rem;
+    left: 4rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: .4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .4rem;
+    border: solid 2px var(--solid);
+    background-color: var(--text-blue);
+    color: var(--text-white);
+    svg{
+        fill: var(--text-white);
+    }
+
+    &:hover{
+        background-color: var(--solid);
+        border-color: var(--text-blue);
+    }
+
+    font-weight: bold;
+}
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --bg-color:#222;
+        --text:black;
+        --paper-bg:#ffffffaa;
+    }
+}
