@@ -1,1 +1,87 @@
 @import url('../../style.css');
+
+main{
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        label{
+            margin-bottom: 5px;
+            &:not(:first-of-type){
+                margin-top: 15px;
+            }
+        }
+        > input {
+            color: var(--text);
+            width: 100%;
+            height: 2.2rem;
+            border-radius: 0.5rem;
+            padding: 0 .4rem 0;
+            border: solid var(--solid) 1px;
+            &:focus{
+                outline: none;
+                border-width: 3px;
+            }
+            &::placeholder{
+                color: var(--text-disabled);
+                opacity: 1;
+            }
+            &[type="date"]:invalid{
+                color: var(--text-disabled);
+            }
+
+        }
+        label:has(+ input[required])::after, #radio-buttons span::after{
+            content: ' *';
+            color: var(--solid);
+        }
+    }
+    span{
+        margin-top: 1rem;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 1.5rem;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border-radius: .5rem;
+        border: solid var(--text-blue) 2px;
+        background-color: var(--solid);
+        color: var(--text-accent);
+        font-weight: bold;
+        font-size: 1.05rem;
+        transition: all .2s ease-in-out;
+        &:hover{
+            background-color: var(--text-blue);
+            border-color: var(--solid);
+        }
+        svg {
+            width: 1.5rem;
+            fill: var(--text-white);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    button {
+        background-color: var(--solid-2);
+        border-color: var(--bg-color-2);
+        &:hover{
+            background-color: var(--solid);
+            border-color: var(--solid-2);
+        }
+    }
+    main form > input {
+        color: var(--text-black);
+        &::placeholder{
+            color: var(--text-disabled);
+        }
+        &[type="date"]:invalid{
+            color: var(--text-disabled);
+        }
+    }
+}
