@@ -20,7 +20,7 @@ enviarButton.addEventListener('click',(evt)=>{
     evt.preventDefault();
     inputRadioTipoCadastro = document.querySelector('input[name="tipo_cadastro"]:checked')
     if(!inputNome.value || !inputDataNasc.value || !inputEmail.value || !inputRadioTipoCadastro || !inputFruta.value){
-        let errStr = "Preencha os campos obrigatórios:\n";
+        let errStr = "Preencha o(s) campo(s) obrigatório(s):\n";
         if(!inputNome.value) {
             errStr += "- Nome;\n"
         }
