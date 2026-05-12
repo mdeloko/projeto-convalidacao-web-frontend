@@ -41,6 +41,9 @@ body {
             display: flex;
             justify-content: space-evenly;
             a {
+                display: flex;
+                align-items: center;
+                gap:5px;
                 color: var(--text-accent);
                 border-radius: 0.5rem;
                 font-weight: 600;
@@ -49,6 +52,10 @@ body {
                 transition: all 0.3s ease-in-out;
                 &:hover{
                     background-color: var(--text-blue);
+                }
+                svg{
+                    width: 2rem;
+                    fill: var(--text-white);
                 }
             }
         }
@@ -60,7 +67,7 @@ body {
         object-position: 0 40%;
     }
     main {
-        padding: 2vh 10vw 5vh 10vw;
+        padding: 2vh 20vw 5vh;
         flex: 1;
         display:flex;
         flex-direction: column;
@@ -72,10 +79,13 @@ body {
         }
         #darkmode_insight{
             position: absolute;
-            bottom: 18rem;
-            right: 10rem;
+            bottom: 20rem;
+            right: 9rem;
             width: 25%;
             text-align: justify;
+            padding: 1rem;
+            border: solid 2px var(--solid);
+            border-radius: 1rem 1rem 0 1rem;
         }
     }
     #guy_with_arms_crossed {
@@ -95,6 +105,9 @@ body {
             font-weight: bold;
             color: var(--text-accent);
         }
+        a{
+           color: var(--text-accent); 
+        }
     }
 
 }
@@ -109,6 +122,13 @@ p {
     font-size: 1.1rem;
     text-indent: 1.5rem;
     text-align: justify;
+    &:not(:first-of-type){
+        margin: 1rem 0;
+    }
+    abbr {
+        text-decoration: underline;
+        cursor: help;
+    }
 }
 
 @media (prefers-color-scheme: dark){
