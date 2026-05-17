@@ -12,65 +12,7 @@ main{
                 margin-top: 15px;
             }
         }
-        > input {
-            color: var(--text);
-            width: 100%;
-            height: 2.2rem;
-            border-radius: 0.5rem;
-            padding: 0 .4rem 0;
-            border: solid var(--solid) 1px;
-            &:focus{
-                outline: none;
-                border-width: 3px;
-            }
-            &::placeholder{
-                color: var(--text-disabled);
-                opacity: 1;
-            }
-            &[type="date"]:invalid{
-                color: var(--text-disabled);
-            }
-
-        }
-        #radio-buttons {
-            margin: 15px 0;
-            display: flex;
-            flex-direction: column;
-            gap:10px; 
-            span{
-                align-self: center;
-            }
-            .radio-button-option {
-                cursor: pointer;
-                input[type="radio"]{
-                    appearance: none;
-                    width: 1rem;
-                    height: 1rem;
-                    border-radius: 50%;
-                    background-color: var(--bg-color-1);
-                    border: 1px solid var(--solid);
-                    transition: all .1s linear;
-                    &:checked{
-                        border-width: 4px;
-                    }
-                    cursor:pointer;
-                }
-                label{
-                    padding: 1rem;
-                    cursor: pointer;
-                }
-                &:hover{
-                    label{
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
-    }
-    label:has(+ input[required])::after, #radio-buttons span::after{
-        content: ' *';
-        color: var(--solid);
-    }
+    }  
     #botoes{
         display: flex;
         gap:2rem;
@@ -78,36 +20,77 @@ main{
     #wrapper_lista_usuarios{
         width: 100%;
         margin-top: 2rem;
+        button{
+            margin: 0;
+        }
         #titulo{
             border: 2px var(--solid) solid;
             border-radius: 1rem 1rem 0 0;
             padding: .5rem 1rem;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.05);
             backdrop-filter: blur(5px);
             display: flex;
             justify-content: space-between;
+        }
+        #input{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
         }
         #dados{
             padding: .5rem 1rem;
             border: 2px var(--solid) solid;
             border-top: 0;
             border-radius: 0 0 1rem 1rem;
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(0, 0, 0, 0.02);
             backdrop-filter: blur(5px);
             min-height: 6rem;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            max-height: 25rem;
+            overflow-y: auto;
         }
         .card{
             padding: 1rem;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 4rem;
-            border: solid 1px rgba(255, 255, 255, 0.2);
+            justify-content: space-between;
+            align-items: center;
+            min-height: 6rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            border: solid 1px rgba(0, 0, 0, 0.2);
             border-radius: .5rem;
+            .card-data{
+                display: flex;
+                flex-direction: column;
+                gap:0.3rem;
+            }
         }
+    }
+    input {
+        color: var(--text);
+        width: 100%;
+        height: 2.2rem;
+        border-radius: 0.5rem;
+        padding: 0 .4rem 0;
+        border: solid var(--solid) 1px;
+        &:focus{
+            outline: none;
+            border-width: 3px;
+        }
+        &::placeholder{
+            color: var(--text-disabled);
+            opacity: 1;
+        }
+        &[type="date"]:invalid{
+            color: var(--text-disabled);
+        }
+    }
+    label:has(+ input[required])::after, #radio-buttons span::after{
+        content: ' *';
+        color: var(--solid);
     }
 }
 button {
@@ -145,13 +128,25 @@ button {
             border-color: var(--solid-2);
         }
     }
-    main form > input {
+    main input {
         color: var(--text-black);
         &::placeholder{
             color: var(--text-disabled);
         }
         &[type="date"]:invalid{
             color: var(--text-disabled);
+        }
+    }
+    main #wrapper_lista_usuarios{
+        .card {
+            background-color: transparent;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        #titulo{
+            background-color: rgba(255, 255, 255, 0.1)
+        }
+        #dados{
+            background-color: rgba(255, 255, 255, 0.05);
         }
     }
 }
