@@ -22,7 +22,7 @@
 }
 
 body {
-    height: 100dvh;
+    min-height: 100dvh;
     width: 100dvw;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ body {
     overflow-x: hidden;
     header {
         width: 100%;
-        height: 8%;
+        height: 4rem;
         background-color: var(--solid);
         display: flex;
         flex-direction: row;
