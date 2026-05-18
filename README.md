@@ -52,7 +52,7 @@ Esta página contém:
 - As funções de exibição/remoção de elementos HTML;
 - Formulário HTML com 2 campos;
 - Área de exibição dos dados salvos e restaurados do `localStorage`;
-- Botão para enviar informações o formulário ao `localStorage`;
+- Botão para enviar informações do formulário ao `localStorage`;
 - Botão para limpar campos deste formulário;
 - Botão para apagar a lista completa do `localStorage`;
 - Botão por card para apagar o referido item da lista e do `localStorage`.
